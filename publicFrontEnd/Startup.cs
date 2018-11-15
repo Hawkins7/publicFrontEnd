@@ -31,6 +31,10 @@ namespace publicFrontEnd
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            // Add framework services
+            services.AddMvc();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
